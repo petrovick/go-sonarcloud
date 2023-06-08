@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  go-sonar:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    tty: true
+    command: go test -coverprofile=coverage.out
